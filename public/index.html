@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Travel</title>
-    <script type="text/javascript" src="./js/bundle.js"></script>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Travel</title>
+  <script type="text/javascript" src="./js/bundle.js"></script>
+</head>
+<body>
 
-    <main id="app">
-      <h1>Country Data!</h1>
-      <p id="county-name" v-if="countryNameURL" v-bind:src="countryNameURL"></p>
-      <button v-on:click="fetchCountries">Press Here</button>
-      <ul>
+  <main id="app">
+    <h1>Country Data!</h1>
+    <p id="county-name" v-if="countryNameURL" v-bind:src="countryNameURL"></p>
+    <button v-on:click="fetchCountries">Press Here</button>
+    <ul>
+      <a href="countryNameURL">
         <li v-for="country in countryNameURL">
           {{ country.name }}
         </li>
-      </ul>
+      </a>
+    </ul>
 
-    </main>
+  </main>
 
-  </body>
+</body>
 </html>
